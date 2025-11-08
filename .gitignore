@@ -17,7 +17,8 @@ backend/.env
 
 # Debug files
 debug_prompts/
-*.txt
+debug_prompts/*.txt
+prompt/*.txt
 
 # Node
 node_modules/
