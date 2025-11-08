@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-warm-white text-charcoal font-sans;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cbnu-red text-white px-6 py-3 rounded-dawangi font-medium
+           hover:brightness-110 hover:shadow-dawangi transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-pure-white text-cbnu-red px-6 py-3 rounded-dawangi font-medium
+           border-2 border-cbnu-red hover:bg-cbnu-red hover:text-white
+           transition-all duration-200;
+  }
+
+  .capsule-btn {
+    @apply px-5 py-2.5 rounded-full bg-pure-white text-charcoal font-medium
+           border border-gray-200 hover:border-cbnu-red hover:text-cbnu-red
+           hover:shadow-md transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-pure-white rounded-dawangi p-6 shadow-dawangi;
+  }
+
+  .talk-bubble {
+    @apply bg-pure-white rounded-2xl p-4 shadow-dawangi
+           relative before:content-[''] before:absolute;
+  }
+
+  .talk-bubble-left {
+    @apply talk-bubble
+           before:left-[-10px] before:top-4 before:border-[10px]
+           before:border-transparent before:border-r-pure-white;
+  }
+
+  .talk-bubble-right {
+    @apply talk-bubble bg-cbnu-red text-white
+           before:right-[-10px] before:top-4 before:border-[10px]
+           before:border-transparent before:border-l-cbnu-red;
+  }
+}
+
+@layer utilities {
+  .animate-breathe {
+    animation: breathe 2s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-breathe,
+    .animate-slide-up {
+      animation: none;
+    }
+  }
+}

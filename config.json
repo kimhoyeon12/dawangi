@@ -1,0 +1,47 @@
+{
+  "routing": {
+    "다전공_제도": {
+      "prompt": "prompt/prompt_policy_common.txt",
+      "data": "data/common/다(부)전공 안내 및 이수 방법.md",
+      "description": "다전공 제도, 절차, 신청 방법, 이수 제한 관련"
+    },
+    "전공_현황": {
+      "prompt": "prompt/prompt_program_catalog.txt",
+      "data": "data/common/융합전공_연계전공_현황.md",
+      "description": "융합전공/연계전공 목록, 관련학과, 주임교수, 국책사업 정보"
+    },
+    "융합전공_졸업요건": {
+      "prompt": "prompt/prompt_convergence_requirements.txt",
+      "data": "data/common/융합전공_졸업요건.md",
+      "description": "총 이수학점, 전공필수, 졸업논문/대체, 학위명"
+    },
+    "융합전공_교과과정": {
+      "prompt": "prompt/prompt_convergence_curriculum.txt",
+      "data_template": "data/majors/{program_name}_교과과정.md",
+      "available_programs": [
+        "빅데이터_전공",
+        "지식재산_스마트융합",
+        "위기관리_전공",
+        "보안컨설팅_전공",
+        "벤처비즈니스_전공",
+        "이차전지_융합전공",
+        "공공데이터사이언스_전공"
+      ],
+      "description": "교과목 목록, 전필/전선, 타학과 인정, 중복 학점 인정"
+    }
+  },
+  "router": {
+    "prompt": "prompt/prompt_multi_routing.txt",
+    "description": "질문을 4개 카테고리 중 하나로 분류"
+  },
+  "contact": {
+    "교무과": "043-261-3916, 3984"
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-01-06",
+    "total_convergence_programs": 30,
+    "total_linked_programs": 2,
+    "data_base_date": "2025-06"
+  }
+}
