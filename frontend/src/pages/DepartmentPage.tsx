@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TalkBubble } from '../components/TalkBubble';
 import { useAppStore } from '../stores/appStore';
